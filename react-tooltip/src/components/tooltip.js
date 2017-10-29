@@ -8,6 +8,7 @@ export default class Tooltip extends React.Component {
   };
 
   render() {
+    console.log('banana')
     const { features } = this.props;
 
     const renderFeature = (feature, i) => {
