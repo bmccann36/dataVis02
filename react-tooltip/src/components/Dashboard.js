@@ -16,6 +16,8 @@ export default class Dashboard extends Component {
     <p> {this.props.coor.lat} latitude </p>
 
 
+
+
     </div>
     )
   }

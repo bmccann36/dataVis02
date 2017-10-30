@@ -18,7 +18,7 @@ export default class Application extends React.Component {
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v9',
       center: [-74.8194, 42.6311],
-      zoom: 12.5
+      zoom: 3
     });
 
 
@@ -31,10 +31,10 @@ export default class Application extends React.Component {
 
   render() {
     const style ={
-      position: 'absolute',
+      position: 'relative',
       top: 0,
       bottom: 0,
-      width: '50%'
+      // width: '50%'
     };
     return (
       <div style={style}
