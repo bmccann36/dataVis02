@@ -35,8 +35,8 @@ const sortLatLon = function (a, b) {
   if (a.lat < b.lat) return -1
   if (a.lat > b.lat) return 1
   if (a.lat == b.lat) {
-    if (a.lon < b.lon) return 1
-    if (a.lon > b.lon) return -1
+    if (a.lon < b.lon) return -1
+    if (a.lon > b.lon) return 1
     if (a.lon == b.lon) return 0
   }
 }
