@@ -6,3 +6,6 @@ however we want a range so that the more specific longitudes can be grouped in t
 
 ## TESTS
 with smaller set hover mouse and see what data is returned, does it look correct?
+
+## POSSIBLE CHANGE
+make lat and possibly also long less precise
