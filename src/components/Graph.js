@@ -12,7 +12,7 @@ export default class Chart extends React.Component {
 const yChange = Math.abs(this.props.coor.lat)
 const bChange = Math.abs(this.props.coor.lng)
 
-console.log(bChange)
+console.log('lat',yChange, 'lon', bChange)
     return (
       <div className="graph">
         <h1> test </h1>

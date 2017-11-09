@@ -13,7 +13,7 @@ export default class Application extends React.Component {
 
 
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v9',
