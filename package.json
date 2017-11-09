@@ -1,0 +1,11 @@
+{
+  "name": "sorting-work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "start": "nodemon",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
+}
