@@ -21,8 +21,8 @@ class Application extends React.Component {
   render() {
     return (
       <div className="main">
-        {/* <Graph coor= {this.state} /> */}
-        <Dashboard coor ={this.state} />
+        <Graph coor= {this.state} />
+        {/* <Dashboard coor ={this.state} /> */}
         <Map setCoor={this.setCoor} />
 
       </div>
