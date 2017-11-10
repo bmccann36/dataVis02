@@ -8,6 +8,8 @@ make it higher resolution i.e. more precise
 
 make a dashboard that lets you modify the radius of data returned etc..
 
+create correlations,  i.e income, public housing etc...
+
 ## TESTS
 with smaller set hover mouse and see what data is returned, does it look correct?
 
