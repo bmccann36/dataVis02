@@ -7,7 +7,13 @@ export default class Dashboard extends Component {
   constructor(props){
     super(props)
   }
+
+
+
+
   render(){
+    let lat = this.props.corr.lat
+
     console.log(this.props)
     return(
     <div className= "dashboard" >

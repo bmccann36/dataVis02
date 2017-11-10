@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard'
 import Map from './components/Map'
 
 import Graph from './components/Graph'
@@ -21,7 +21,8 @@ class Application extends React.Component {
   render() {
     return (
       <div className="main">
-        <Graph coor= {this.state} />
+        {/* <Graph coor= {this.state} /> */}
+        <Dashboard coor ={this.state} />
         <Map setCoor={this.setCoor} />
 
       </div>
