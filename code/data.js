@@ -26,24 +26,24 @@ const grid = focusData.sort(sortLatLon)
 const highestLat = grid.reduce( (acc, val) => {
   return acc.lat > val.lat ? acc : val
 })
-console.log('highest lat', highestLat.lat)
+// console.log('highest lat', highestLat.lat)
 // highest Lat  40.91
 
 const lowestLat = grid.reduce( (acc, val) => {
   return acc.lat < val.lat ? acc : val
 })
-console.log('lowest lat', lowestLat.lat)  // 40.502
+// console.log('lowest lat', lowestLat.lat)  // 40.502
 
 
 const highestLon = grid.reduce( (acc, val) => {
   return acc.lon > val.lon ? acc : val
 })
-// console.log(highestLon)  //lon: -73.706596761
+console.log(highestLon.lon, 'highest lon')  //lon: -73.706596761
 
 const lowestLon = grid.reduce( (acc, val) => {
   return acc.lon < val.lon ? acc : val
 })
-// console.log(lowestLon)  //   lon: -74.249303727
+console.log(lowestLon.lon, 'lowest lon')  //   lon: -74.249303727
 
 
 
