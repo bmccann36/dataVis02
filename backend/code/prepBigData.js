@@ -19,10 +19,8 @@ data.forEach(entry => {
     grid[up][over] = [entry]
   }
 })
-// test to make sure we are in right spot
- // => undefined
 
-// let computedData = []
+// transform grid so that each spot contains the top five crimes for that location
 for (let i = 0; i < grid.length; i++) {
   for (let j = 0; j < grid[i].length; j++) {
     if (grid[i][j]) {
@@ -30,8 +28,8 @@ for (let i = 0; i < grid.length; i++) {
     }
   }
 }
-let point = (grid[39][38])
-console.log(point)
+
+console.log(grid)
 
 
 // TAKES IN A LIST OF CRIMES GIVES BACK THE TOP FIVE MOST OCCURING AND THEIR FREQ

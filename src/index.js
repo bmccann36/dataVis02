@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Dashboard from './components/Dashboard'
 import Map from './components/Map'
 import GraphCont from './components/GraphCont'
-const data = require('./data/medData')
+// const data = require('./grid')
 
 
 
@@ -26,28 +26,20 @@ class Application extends React.Component {
     let dist2 = lonVal + 74.249303727
     let ratio2 = dist2 / .542706966
     let over = Math.floor(ratio2 * 100)
-    let crimes = []
-    if (up && over) {
-      crimes = (data[up + 1][over - 1]) || []
-      crimes = crimes.concat((data[up + 1][over]))
-      crimes = crimes.concat(data[up][over + 1])
-      crimes.concat(data[up][over - 1]);
-      crimes.concat(data[up][over]);
-      crimes.concat(data[up][over + 1]);
-      crimes.concat(data[up - 1][over - 1]); crimes.concat(data[up - 1][over]); crimes.concat(data[up - 1][over + 1]);
-      this.setState({ crimes: crimes })
-      // console.log(this.state)
-    }
+    this.setState({ up: up, over: over })
   }
 
 
   render() {
     return (
       <div className="main">
-        <Dashboard coor={this.state} />
+        {/* <Dashboard coor={this.state} /> */}
         <Map setCoor={this.setCoor} />
 
-        {/* <GraphCont crimes={this.state.crimes} /> */}
+        <GraphCont
+          up={this.state.up}
+          over={this.state.over}
+        />
 
       </div>
     )
