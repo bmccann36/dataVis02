@@ -9,17 +9,19 @@ export default class Dashboard extends Component {
     super()
   }
 
-  // componentWillReceiveProps() {
-  //     // calculate up
-  //     let val = this.props.coor.lat
-  //     let dist = val - 40.502 // subtract the value from the base (lowest value)
-  //     let ratio = dist / .4070 // divide that by the range (difference between high lat and low lat)
-  //     let up = Math.floor(ratio * 100) // turn ito a percentage value
-  //     // calculate over
-  //     let lonVal = this.props.coor.lng
-  //     let dist2 = lonVal + 74.249303727
-  //     let ratio2 = dist2 / .542706966
-  //     let over = Math.floor(ratio2 * 100)
+  componentWillReceiveProps() {
+      // calculate up
+      let val = this.props.coor.lat
+      let dist = val - 40.4988 // subtract the value from the base (lowest value)
+      let ratio = dist / 0.4139 // divide that by the range (difference between high lat and low lat)
+      let up = Math.floor(ratio * 100) // turn ito a percentage value
+      // calculate over
+      let lonVal = this.props.coor.lng
+      let dist2 = lonVal + 74.25319084
+      let ratio2 = dist2 / 0.552474155
+      let over = Math.floor(ratio2 * 100)
+      console.log('up', up)
+      console.log('over', over)
   //     let crimes = []
   //     if (up && over) {
   //       crimes = (data[up + 1][over - 1]) || []
@@ -33,7 +35,7 @@ export default class Dashboard extends Component {
   //       console.log(this.state)
   //     }
   //   // }
-  // }
+  }
 
 
   render() {

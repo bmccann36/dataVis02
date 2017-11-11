@@ -1,13 +1,11 @@
-import { data } from './code/data'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
-
 import Dashboard from './components/Dashboard'
 import Map from './components/Map'
 import GraphCont from './components/GraphCont'
+const data = require('./data/medData')
 
-// import Graph from './components/Graph'
+
 
 class Application extends React.Component {
   constructor() {
@@ -46,10 +44,10 @@ class Application extends React.Component {
   render() {
     return (
       <div className="main">
-        {/* <Dashboard coor={this.state} /> */}
+        <Dashboard coor={this.state} />
         <Map setCoor={this.setCoor} />
 
-        <GraphCont crimes={this.state.crimes} />
+        {/* <GraphCont crimes={this.state.crimes} /> */}
 
       </div>
     )
