@@ -1,6 +1,6 @@
 const chalk = require('chalk')
 
-let medData = require('../data/medData')
+let medData = require('../medData')
 //THROW OUT BAD ENTRIES
 medData = medData.filter(entry => entry[29] && entry[30])
 
@@ -51,14 +51,14 @@ function calcOver(lon) {
 
 module.exports = { data }
 
-function magenta(str) {
-  console.log(chalk.magenta(str))
-}
-function yellow(str) {
-  console.log(chalk.yellow(str))
-}
+// function magenta(str) {
+//   console.log(chalk.magenta(str))
+// }
+// function yellow(str) {
+//   console.log(chalk.yellow(str))
+// }
 
-function cyan(str) {
-  console.log(chalk.cyan(str))
-}
+// function cyan(str) {
+//   console.log(chalk.cyan(str))
+// }
 

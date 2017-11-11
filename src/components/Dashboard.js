@@ -1,8 +1,9 @@
+import { data } from '../code/data'
 
 import React, { Component } from 'react'
+var _ = require('lodash');
 
 // const data = require('../code/data').data
-import { data } from '../code/data'
 
 export default class Dashboard extends Component {
 
@@ -18,7 +19,25 @@ export default class Dashboard extends Component {
     let dist2 = lonVal + 74.249303727
     let ratio2 = dist2 / .542706966
     let over = Math.floor(ratio2 * 100)
-    if (up && over) console.log('crimes for this area', data[up][over])
+    let crimes = []
+    if (up && over) {
+      crimes = (data[up + 1][over - 1]) || []
+      crimes = crimes.concat((data[up + 1][over]))
+      crimes = crimes.concat(data[up][over + 1])
+      crimes.concat(data[up][over - 1]);
+      crimes.concat(data[up][over]);
+       crimes.concat(data[up][over + 1]);
+      crimes.concat(data[up - 1][over - 1]); crimes.concat(data[up - 1][over]); crimes.concat(data[up - 1][over + 1]) ;
+      // _.flattenDeep(crimes)
+      // crimes.join(',')
+      console.log(crimes)
+
+    }
+
+    const offenses = crimes.map( offense => {
+     return (offense) ? <p key={offense.id}> {offense.cat} </p> : null
+    })
+
 
 
     return (
@@ -29,7 +48,7 @@ export default class Dashboard extends Component {
         <p>   up {up} </p>
         <p> over {over} </p>
 
-        <p> crimes  </p>
+        <p> crimes {offenses} </p>
 
 
 
