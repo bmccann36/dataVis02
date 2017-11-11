@@ -1,9 +1,8 @@
 // const experiments = require('./code/experiments')
-const sortAlgorithm = require('./code/sortAlgorithm')
-const data = require('./code/data.js')
+const prepBigData = require('./backend/code/prepBigData.js')
 
 
 
-
+// console.log(highestLat) //id: 348676, cat: 'BURGLARY', lat: 40.9127
 
 
