@@ -9,20 +9,25 @@ export default class GraphCont extends React.Component {
     let crimes = this.props.crimes
     if (crimes) {
       // filter out any undefined
-      crimes = crimes.filter(crime => crime != undefined)
+      crimes = crimes.filter(crime => crime !== undefined)
       crimes.forEach(crime => {
         frequency[crime.cat] ? frequency[crime.cat]++ : frequency[crime.cat] = 1
       })
-      var props = Object.keys(frequency).map(function (key) {
-        return { key: key, value: this[key] };
+      // console.log('freq', frequency)
+      var props = Object.keys(frequency).map(function (crime) {
+        return { crime: crime, value: this[crime] };
       }, frequency);
       props.sort(function (p1, p2) { return p2.value - p1.value; });
       var topFive = props.slice(0, 5);
-      console.log(topFive)
+      console.log('top five', topFive)
+
     }
     return (
       <div className="GraphCont">
-        <Graph topFive={topFive} />
+
+          <Graph topFive={topFive} />
+        }
+
       </div>
     )
   }
