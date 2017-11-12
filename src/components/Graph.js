@@ -16,7 +16,7 @@ export default class Chart extends React.Component {
     const data = topFive.map((crime, i) => {
       return { x: i, y: crime.value }
     })
-    data.push({x:data.length, y:75})
+    // data.push({x:data.length, y:75}) // to force the domain
 
     return (
       <div className="graph">
@@ -30,7 +30,13 @@ export default class Chart extends React.Component {
                   key={i}
                   label={crime.crime}
                   labelPlacement="perpendicular"
-                  style={{ tickLabels: { fill: "none" } }}
+                  domain={[0, 75]}
+
+                  style={{
+                    axis: { stroke: "black" },
+                    grid: { stroke:  "grey" },
+                    tickLabels: { fontSize: 15, padding: 15 }
+                  }}
                   axisValue={i}
                 />
               );
@@ -39,10 +45,13 @@ export default class Chart extends React.Component {
           <VictoryBar
             style={{ data: { fill: "tomato", width: 25 } }
             }
-            data={ data || defaultData }
+            data={data || defaultData}
           />
         </VictoryChart>
       </div>
     );
   }
 }
+
+
+{/* style={{ tickLabels: { fill: "solid" } }} */}

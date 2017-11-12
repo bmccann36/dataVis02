@@ -10,7 +10,11 @@ import GraphCont from './components/GraphCont'
 class Application extends React.Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      lngLat : [],
+      up : 0,
+      over : 0
+    }
     this.setCoor = this.setCoor.bind(this)
   }
 

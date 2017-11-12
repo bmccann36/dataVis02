@@ -29,8 +29,6 @@ for (let i = 0; i < grid.length; i++) {
   }
 }
 
-console.log(grid)
-
 
 // TAKES IN A LIST OF CRIMES GIVES BACK THE TOP FIVE MOST OCCURING AND THEIR FREQ
 function reduceCrimes(crimes) {
