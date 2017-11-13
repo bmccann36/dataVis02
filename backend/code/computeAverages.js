@@ -19,10 +19,9 @@ for (let i = 0; i < grid.length; i++) {
 }
 // NOW IN OUR COUNTER ARRAYS ARE STORED AT EACH CRIME KEY
 // WE NEED TO LOOP THROUGH AND GET AVERAGES FOR EACH
-
 // console.log(chalk.magenta('before average'))
 // console.log(counter)
-// REDUCE ARRAYS TO ONE 'AVERAGE' VALUE
+
 for (let crimeName in counter) {
   if (counter[crimeName].length) {
     counter[crimeName] = getAverage(counter[crimeName])

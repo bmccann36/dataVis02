@@ -17,6 +17,21 @@ with smaller set hover mouse and see what data is returned, does it look correct
 make lat and possibly also long less precise
 
 
+#averages
+{ 'PETIT LARCENY': 23,
+  'HARRASSMENT 2': 18,
+  'ASSAULT 3 & RELATED OFFENSES': 17,
+  'CRIMINAL MISCHIEF & RELATED OF': 14,
+  'GRAND LARCENY': 14,
+  'OFF. AGNST PUB ORD SENSBLTY &': 7,
+  'DANGEROUS DRUGS': 19,
+  'FELONY ASSAULT': 10,
+  ROBBERY: 5,
+  'MISCELLANEOUS PENAL LAW': 6,
+  BURGLARY: 4,
+  'DANGEROUS WEAPONS': 6 }
+
+#total amounts
 const amounts = [ { crime: 'PETIT LARCENY', value: 62205 },
 { crime: 'HARRASSMENT 2', value: 49464 },
 { crime: 'ASSAULT 3 & RELATED OFFENSES', value: 38889 },

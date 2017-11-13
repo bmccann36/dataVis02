@@ -31,27 +31,6 @@ for (let i = 0; i < grid.length; i++) {
   }
 }
 
-// console.log(grid[65][55])
-let grandLarcen = []
-for (let i = 0; i < grid.length; i++) {
-  for (let j = 0; j < grid[i].length; j++) {
-    if (grid[i][j]) {
-      crimes = grid[i][j]
-      crimes.forEach(entry => {
-        if(entry.crime == 'GRAND LARCENY') {
-          // console.log(crimes)
-          grandLarcen.push(entry.crime.value)
-        }
-      })
-    }
-  }
-}
-
-console.log(grandLarcen)
-
-
-
-
 
 // TAKES IN A LIST OF CRIMES GIVES BACK THE TOP FIVE MOST OCCURING AND THEIR FREQ
 function reduceCrimes(crimes) {
