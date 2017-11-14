@@ -5,62 +5,24 @@ const chalk = require('chalk')
 // const data = require('./backend/data/focusedData')
 const grid = require('./src/grid')
 
-let counter = {
-  'PETIT LARCENY': [], 'HARRASSMENT 2': [], 'ASSAULT 3 & RELATED OFFENSES': [], 'CRIMINAL MISCHIEF & RELATED OF': [], 'GRAND LARCENY': [], 'OFF. AGNST PUB ORD SENSBLTY &': [], 'DANGEROUS DRUGS': [], 'FELONY ASSAULT': [], ROBBERY: [], 'MISCELLANEOUS PENAL LAW': [], BURGLARY: [], 'DANGEROUS WEAPONS': []
-}
-// LOOP THROUGH GRID OBJECT
-for (let i = 0; i < grid.length; i++) {
-  for (let j = 0; j < grid[i].length; j++) {
-    if (grid[i][j]) {
-      // console.log(grid[i][j]) // array of five or less objects
-      processEntry(grid[i][j])
-    }
-  }
-}
-// NOW IN OUR COUNTER ARRAYS ARE STORED AT EACH CRIME KEY
-// WE NEED TO LOOP THROUGH AND GET AVERAGES FOR EACH
+const bigData = require('./backend/data/crimeData').data
 
-// console.log(chalk.magenta('before average'))
-// console.log(counter)
-// REDUCE ARRAYS TO ONE 'AVERAGE' VALUE
-for (let crimeName in counter) {
-  if (counter[crimeName].length) {
-    counter[crimeName] = getAverage(counter[crimeName])
-  }
-}
-console.log(chalk.magenta('after average'))
-console.log(counter)
+console.log(bigData.length)
+//
+// lowest lat 40.4988   range 0.4139
 
-function getAverage(array) {
-  var sum = array.reduce((a, b) => a + b)
-  return Math.round(sum / array.length)
-}
+// lowest lon -74.25319084   range 0.552474155
 
-function processEntry(loc) {
-  loc.forEach(obj => {
-    if (counter[obj.crime]) counter[obj.crime].push(obj.value)
-  })
-}
+// let filtered = bigData.filter(entry => {
+//   return entry[29] > 40.609
+// })
 
+// let sorted = bigData.sort(compareFunc)
 
-// { 'PETIT LARCENY': 23,
-// 'HARRASSMENT 2': 18,
-// 'ASSAULT 3 & RELATED OFFENSES': 17,
-// 'CRIMINAL MISCHIEF & RELATED OF': 14,
-// 'GRAND LARCENY': 14,
-// 'OFF. AGNST PUB ORD SENSBLTY &': 7,
-// 'DANGEROUS DRUGS': 19,
-// 'FELONY ASSAULT': 10,
-// ROBBERY: 5,
-// 'MISCELLANEOUS PENAL LAW': 6,
-// BURGLARY: 4,
-// 'DANGEROUS WEAPONS': 6 }
+// function compareFunc(a, b) {
+//   if (a[29] > b[29]) return 1
+//   if (a[29 < b[29]]) return -1
+//   else return 0
+// }
 
-// let row = grid.slice(40, 41)[0] // gotta do at 0
-// console.log(row.length) // 95
-// let line = row.slice(50, 60)
-
-// line.forEach(loc => processEntry(loc))
-
-// console.log(counter)
-// console.log(getAverage(counter['HARRASSMENT 2']))
+// console.log(chalk.magenta('sorted'))
